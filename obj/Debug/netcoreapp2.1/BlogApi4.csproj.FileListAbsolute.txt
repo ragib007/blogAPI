@@ -1,0 +1,14 @@
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.csprojAssemblyReference.cache
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.csproj.CoreCompileInputs.cache
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.RazorAssemblyInfo.cache
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.RazorAssemblyInfo.cs
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.AssemblyInfoInputs.cache
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.AssemblyInfo.cs
+D:\web api\prac\BlogApi4\BlogApi4\bin\Debug\netcoreapp2.1\BlogApi4.deps.json
+D:\web api\prac\BlogApi4\BlogApi4\bin\Debug\netcoreapp2.1\BlogApi4.runtimeconfig.json
+D:\web api\prac\BlogApi4\BlogApi4\bin\Debug\netcoreapp2.1\BlogApi4.runtimeconfig.dev.json
+D:\web api\prac\BlogApi4\BlogApi4\bin\Debug\netcoreapp2.1\BlogApi4.dll
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.RazorTargetAssemblyInfo.cache
+D:\web api\prac\BlogApi4\BlogApi4\bin\Debug\netcoreapp2.1\BlogApi4.pdb
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.dll
+D:\web api\prac\BlogApi4\BlogApi4\obj\Debug\netcoreapp2.1\BlogApi4.pdb
