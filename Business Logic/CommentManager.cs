@@ -11,10 +11,15 @@ namespace BlogApi4.Business_Logic
     {
         private ICommentRepository _commentRepository;
 
-        public CommentManager(ICommentRepository commentRepository)
+        private IPostRepository _postRepository;
+
+        public CommentManager(ICommentRepository commentRepository, IPostRepository postRepository)
         {
             _commentRepository = commentRepository;
+            _postRepository = postRepository;
         }
+
+       
 
         public List<Comment> GetAllComments()
         {
@@ -31,7 +36,7 @@ namespace BlogApi4.Business_Logic
 
         public IEnumerable<Comment> GetCommentByPost(int id)
         {
-            PostRepository _postRepository = new PostRepository();
+            
             if (!_postRepository.Exists(id))
                 throw new ArgumentException($"Post Id {id} doesn't exist");
 
@@ -40,7 +45,7 @@ namespace BlogApi4.Business_Logic
 
         public void CreateComment(Comment comment)
         {
-            PostRepository _postRepository = new PostRepository();
+  
             if(!_postRepository.Exists(comment.PostId))
                 throw new ArgumentException($"Post Id {comment.PostId} doesn't exist");
             _commentRepository.Create(comment);

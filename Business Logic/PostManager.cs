@@ -10,11 +10,15 @@ namespace BlogApi4.Business_Logic
     public class PostManager : IPostManager
     {
         private IPostRepository _postRepository;
-        
-        public PostManager(IPostRepository postRepository)
+        private IAuthorRepository _authorRepository;
+
+        public PostManager(IPostRepository postRepository, IAuthorRepository authorRepository)
         {
             _postRepository = postRepository;
+            _authorRepository = authorRepository;
         }
+
+        
 
         public List<Post> GetAllPosts()
         {
@@ -67,7 +71,7 @@ namespace BlogApi4.Business_Logic
 
         public IEnumerable<Post> GetPostByAuthor(int id)
         {
-            AuthorRepository _authorRepository= new AuthorRepository();
+            
             if(!_authorRepository.Exists(id))
             {
                 throw new ArgumentException($"Author ID: {id} doesn't exist");
@@ -82,7 +86,7 @@ namespace BlogApi4.Business_Logic
 
         public void CreatePost(Post post)
         {
-            AuthorRepository _authorRepository = new AuthorRepository();
+            
             if (!_authorRepository.Exists(post.AuthorId))
             {
                 throw new ArgumentException($"Author ID {post.AuthorId} doesn't exist");

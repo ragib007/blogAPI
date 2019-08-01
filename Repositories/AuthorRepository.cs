@@ -10,12 +10,19 @@ namespace BlogApi4.Repositories
     {
         private List<Author> _authors = new List<Author>();
 
-        public AuthorRepository()
+        private ICommentRepository _commentRepository;
+        private IPostRepository _postRepository;
+
+        public AuthorRepository(ICommentRepository commentRepository,IPostRepository postRepository)
         {
+            _commentRepository = commentRepository;
+            _postRepository = postRepository;
             _authors.Add(new Author { Id = 1, Name = "Jon Snow", Email = "jon-snow@gmail.com", Articles = 11 });
             _authors.Add(new Author { Id = 2, Name = "Jon Nash", Email = "jon-nash@gmail.com", Articles = 12 });
 
         }
+
+        
 
         public IEnumerable<Author> GetAll()
         {
@@ -30,14 +37,14 @@ namespace BlogApi4.Repositories
 
         public IEnumerable<Post> GetPosts(int id)
         {
-            PostRepository postRepository = new PostRepository();
-            return postRepository.GetAll().Where(p => p.AuthorId == id);
+            
+            return _postRepository.GetAll().Where(p => p.AuthorId == id);
         }
 
         public IEnumerable<Comment> GetComments(int id)
         {
-            CommentRepository commentRepository = new CommentRepository();
-            return commentRepository.GetAll().Where(p => p.AuthorId == id);
+            
+            return _commentRepository.GetAll().Where(p => p.AuthorId == id);
         }
 
         public void Create(Author author)
