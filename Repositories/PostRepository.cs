@@ -12,9 +12,9 @@ namespace BlogApi4.Repositories
         
         public PostRepository()
         {
-            _posts.Add(new Post { Id = 1, Title = "Model", Text = "These are objects that fetch the model state in the database", CreatedAt = new DateTime(2019, 7, 2, 11, 45, 13), AuthorId = 1 });
-            _posts.Add(new Post { Id = 2, Title = "View", Text = "Here, the developers can ‘view’ the UI or User Interface of the applications created by data model.", CreatedAt = new DateTime(2019, 7, 4, 12, 53, 35), AuthorId = 1 });
-            _posts.Add(new Post { Id = 3, Title = "Controllers", Text = "Controllers or Components manage the user interaction", CreatedAt = new DateTime(2019, 7, 9, 7, 24, 11), AuthorId = 2 });
+            _posts.Add(new Post { Id = 1, Title = "Model", Text = "These are objects that fetch the model state in the database", CreatedAt = "2019/7/2 11:45:13", AuthorId = 1 });
+            _posts.Add(new Post { Id = 2, Title = "View", Text = "Here, the developers can ‘view’ the UI or User Interface of the applications created by data model.", CreatedAt = "2019/7/4 12:53:35", AuthorId = 1 });
+            _posts.Add(new Post { Id = 3, Title = "Controllers", Text = "Controllers or Components manage the user interaction", CreatedAt = "2019/7/9 7:24:11", AuthorId = 2 });
         }
 
         public List<Post> GetAll()

@@ -13,7 +13,7 @@ namespace BlogApi4.Models
 
         public string Text { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public string CreatedAt { get; set; }
 
         public int AuthorId { get; set; }
     }

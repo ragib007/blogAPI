@@ -28,7 +28,7 @@ namespace BlogApi4
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSingleton<IPostRepository, PostRepository>();
+            services.AddSingleton<IPostRepository, PostRepositoryLocalDb>();
             services.AddSingleton<IPostManager, PostManager>();
             services.AddSingleton<ICommentRepository, CommentRepository>();
             services.AddSingleton<ICommentManager, CommentManager>();

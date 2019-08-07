@@ -87,10 +87,10 @@ namespace BlogApi4.Business_Logic
         public void CreatePost(Post post)
         {
             
-            if (!_authorRepository.Exists(post.AuthorId))
-            {
-                throw new ArgumentException($"Author ID {post.AuthorId} doesn't exist");
-            }
+            //if (!_authorRepository.Exists(post.AuthorId))
+            //{
+            //    throw new ArgumentException($"Author ID {post.AuthorId} doesn't exist");
+            //}
             _postRepository.Create(post);
         }
 
